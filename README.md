@@ -28,43 +28,6 @@ This folder contains the Privacy Policy and Terms of Service pages for Serenity 
 3. Create a CNAME record pointing to `your-username.github.io`
 4. Wait for DNS propagation and SSL certificate generation
 
-## Linking from the App
-
-After deployment, update the app to link to these pages:
-
-### Example URLs
-
-```
-Privacy Policy: https://your-username.github.io/serenity-house-legal/privacy-policy.html
-Terms of Service: https://your-username.github.io/serenity-house-legal/terms-of-service.html
-```
-
-### Update in Flutter
-
-In `lib/screens/profile/profile_view.dart`, you can update the Privacy Policy and Terms of Service sections to open these URLs in a browser:
-
-```dart
-import 'package:url_launcher/url_launcher.dart';
-
-// Add these constants
-const String privacyPolicyUrl = 'https://your-username.github.io/serenity-house-legal/privacy-policy.html';
-const String termsOfServiceUrl = 'https://your-username.github.io/serenity-house-legal/terms-of-service.html';
-
-// Update the onTap handlers
-onTap: () => launchUrl(Uri.parse(privacyPolicyUrl));
-onTap: () => launchUrl(Uri.parse(termsOfServiceUrl));
-```
-
-## Customization
-
-### Update Contact Information
-
-Search for `@serenityhouse.app` in the HTML files and replace with your actual email addresses:
-
-- `privacy@serenityhouse.app` - Privacy inquiries
-- `legal@serenityhouse.app` - Legal/Terms inquiries
-- `support@serenityhouse.app` - General support
-
 ### Update App Version
 
 The privacy policy and terms reference version `1.0.0`. Update these when releasing new versions.
@@ -106,3 +69,4 @@ These legal documents are provided for use with Serenity House. Modify as needed
 ---
 
 *Generated for Serenity House mental health support app*
+
