@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Help Center and FAQs for Serenity House mental wellness app">
+    <meta name="theme-color" content="#006A60">
+    <title>Help Center - Serenity House</title>
+    <link rel="icon" type="image/png" href="app_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background: var(--color-surface-hover);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.25rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-section .btn {
+            background: white;
+            color: var(--color-primary);
+        }
+
+        .contact-section .btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="app_icon.png" alt="Serenity House" class="nav-logo">
+                Serenity House
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li><a href="terms-of-service.html">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>Help Center</h1>
+        <p class="subtitle">Find answers to common questions about Serenity House</p>
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I track my mood?</div>
+                    <div class="faq-answer">
+                        <p>Use the "Quick check-in" section on the home screen to log how you're feeling. Select an
+                            emoji that represents your current mood and optionally add notes. You can track multiple
+                            moods throughout the day.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I create a journal entry?</div>
+                    <div class="faq-answer">
+                        <p>Go to the Journal tab and tap the + button. Write your thoughts and feelings. You can also
+                            get AI-powered feedback and insights on your entries by tapping "Get AI Feedback".</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What is Reflective AI?</div>
+                    <div class="faq-answer">
+                        <p>The Chat tab connects you with an AI assistant designed for self-reflection and emotional
+                            support. It can provide journaling prompts, discuss your feelings, and offer coping
+                            strategies. All conversations are private and stored securely.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Does the app work offline?</div>
+                    <div class="faq-answer">
+                        <p>Yes! All your data is stored locally on your device and automatically syncs to the cloud when
+                            you're back online. You can continue tracking your mood and journaling even without
+                            internet.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I export my data as PDF?</div>
+                    <div class="faq-answer">
+                        <p>Go to Settings > Export Data as PDF. You can export your mood history and journal entries as
+                            a PDF document. This is useful for sharing with a therapist or keeping personal records.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I get emergency help?</div>
+                    <div class="faq-answer">
+                        <p>Tap the emergency icon (heart with pulse) in the app bar to access crisis helplines for your
+                            region. These are available 24/7 and staffed by trained professionals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What are achievements?</div>
+                    <div class="faq-answer">
+                        <p>Achievements reward your consistency and progress. You earn them by logging moods, writing
+                            journal entries, maintaining streaks, and completing mental workouts. View your achievements
+                            from Settings > Achievements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I delete my account?</div>
+                    <div class="faq-answer">
+                        <p>Go to Settings and scroll to the Danger Zone section. Tap "Delete account" to permanently
+                            remove your account and all associated data. This action cannot be undone. You can also
+                            <a href="delete-account.html">request deletion via email</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>App Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">😊</div>
+                        <h3>Mood Tracking</h3>
+                        <p>Log your emotions daily with the Quick check-in feature and visualize trends over time.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📓</div>
+                        <h3>Journaling</h3>
+                        <p>Write your thoughts and get AI-powered insights to help you understand your feelings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Reflective AI Chat</h3>
+                        <p>Talk with an AI assistant for emotional support and self-reflection prompts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📄</div>
+                        <h3>Export to PDF</h3>
+                        <p>Export your mood and journal data to share with healthcare professionals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Achievements</h3>
+                        <p>Earn rewards for maintaining healthy habits and tracking your wellness journey.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧘</div>
+                        <h3>Mental Workouts</h3>
+                        <p>Guided breathing exercises and mindfulness activities to reduce stress.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚨</div>
+                        <h3>Emergency Resources</h3>
+                        <p>Quick access to crisis helplines for your region when you need immediate support.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">☁️</div>
+                        <h3>Offline-First</h3>
+                        <p>Works without internet and automatically syncs when you're connected.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2>Still Have Questions?</h2>
+                <p>We're here to help. Reach out to our support team and we'll get back to you as soon as possible.</p>
+                <a href="mailto:ownyourownhappiness@gmail.com?subject=Help%20Request%20-%20Serenity%20House"
+                    class="btn">
+                    Contact Support
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Serenity House. All rights reserved.</p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> ·
+            <a href="terms-of-service.html">Terms of Service</a> ·
+            <a href="delete-account.html">Delete Account</a>
+        </p>
+    </footer>
+
+    <script>
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const wasActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Toggle current item
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
